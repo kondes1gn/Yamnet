@@ -1,0 +1,77 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylevhod.css" type="text/css">
+</head>
+<body class="body">
+<div class="form_mg">
+<form class="form">
+<h1 class="form_title">Регистрация</h1>
+<div class="form_grup">
+  <div>
+    <label class="form_label">ФИО</label>
+  </div>
+  <div>
+    <td>
+      <input class="form_input for" type="text" placeholder="Ведите Ф.И.О"
+  pattern="[А-Я]+[а-я]{0,10}[\s-][А-Я]+[а-я]{0,10}[\s-][А-Я]+[а-я]{0,10}" required
+  title="Ошибка ввода данных">
+      </td>
+  </div>
+</div>
+<div class="form_grup">
+  <div>
+    <label class="form_label">Номер</label>
+  </div>
+  <div> 
+    <td><input class="form_input for" type="text" placeholder="Номер"
+     pattern="[A-Za-z]{1,5}" required
+     title="Ошибка ввода данных">
+    </td>
+  </div>
+</div>
+<div class="form_grup">
+  <div>
+    <label class="form_label">Email</label>
+  </div>
+    <div>
+      <td><input class="form_input for" type="text" placeholder="Email"
+    pattern="[A-Za-z_.-]{1,}@[A-za-z_.-]{1,}[.][A-Za-z]{2,4}" required
+    title="aaa@aa.aa">
+      </td>
+    </div>
+</div>
+<div class="form_grup">
+  <div>
+    <label class="form_label">Пароль</label>
+  </div>
+  <div>
+    <td>
+    <input class="form_input" type="password" placeholder="Пароль"
+   pattern="[A-Za-z]{1,}" required
+   title="Ошибка ввода данных">
+    </td>
+  </div>
+</div>
+<div class="form_grup">
+  <div>
+    <label class="form_label">Введите пароль повторно</label>
+  </div>
+  <div>
+    <td>
+      <input class="form_input" type="password" placeholder="Введите пароль повторно"
+   pattern="[A-Za-z]{1,}" required
+   title="Ошибка ввода данных">
+    </td>
+  </div>
+</div>
+<div class="form_grup">
+  <label class="form_label">Согласие на обработку персональных данных</label>
+  <input type="checkbox" name="" value=""  checked>
+</div>
+  <button class="form_button">Зарегистрироваться</button>
+</div>
+</form>
+</div>
+</body>
+</html>
