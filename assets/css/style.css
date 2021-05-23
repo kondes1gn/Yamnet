@@ -143,3 +143,16 @@ html, body {
    border-bottom-right-radius: 10px;
 }
 
+.c-me-8{
+    margin-right: 7rem;
+}
+.vertical-stick {
+    position: relative;
+}
+.vertical-stick::after  {
+    content: '|';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -3.5rem;
+}

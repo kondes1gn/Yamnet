@@ -11,6 +11,10 @@ if ($_SESSION['user']['user_group'] === '0') {
 
 require_once '../vendor/connect.php';
 $claims = mysqli_query($connect, "SELECT * FROM `claims` ");
+$claimsCompletedLength = mysqli_query($connect,"SELECT `status` FROM `claims` WHERE status = 1");
+$claimsProcessingLength = mysqli_query($connect,"SELECT `status` FROM `claims` WHERE status = 0");
+
+
 
 
 ?>
@@ -142,8 +146,32 @@ $claims = mysqli_query($connect, "SELECT * FROM `claims` ");
       <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
         <div class="container" style="max-width: 1200px">
           <h1 class="my-5" style="color:red;">Админ панель</h1>
+          <!-- Счётчик -->
+          <div class="d-flex mt-5" data-counters="">
+            <div class="c-me-8 vertical-stick">
+              Всего: 
+              <span style="font-weight: 700">
+                <?= mysqli_num_rows($claims) ?>
+              </span>
+            </div>
+            <div class="c-me-8 vertical-stick">
+              Обработанных:
+               <span style="color: green; font-weight: 700">
+                <?= mysqli_num_rows($claimsCompletedLength)?>
+               </span>
+            </div>
+            <div>
+              Не обработанных:
+               <span style="color: red; font-weight: 700">
+                <?= mysqli_num_rows($claimsProcessingLength)?>
+               </span>
+            </div>
+          </div>
+          <!-- / Счётчик -->
+          
           <h2 class="my-5">Заявки пользователей</h2>
           <div class="row">
+    
 
 
             <?php
